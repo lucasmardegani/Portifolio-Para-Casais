@@ -13,6 +13,13 @@
 </head><!--titulo-->
 <body>
 
+<div id="inicio">
+  <div class="conteudo-inicio">
+    <div class="coracao"></div>
+    <p>Aperte para começar</p>
+  </div>
+</div>
+
 <header>
     <div class="interface">
         <div class="logo">
@@ -120,7 +127,7 @@
         <div class="interface">
             <h2 class="titulo">Galeria</h2>
             <div class="flex">
-                <div class="img-gal" style="background-image: url(imagens/mahuka.jpeg);"></div>
+                <div class="img-gal" style="background-image: url(imagens/banner.png);"></div>
                 <div class="img-gal" style="background-image: url(imagens/banner.png);"></div>
                 <div class="img-gal" style="background-image: url(imagens/banner3.jpg);"></div>
             </div><!--flex-->
@@ -128,20 +135,30 @@
     </section><!--galeria-->
 
     <section class="video">
-    <iframe class="arctic" width="250" src="https://youtube.com/embed/m-_2MhQpmMk" frameborder="0" allowfullscreen></iframe>
-    </section><!--VIDEO-YOUTUBE-->
+    <iframe
+        id="musica"
+        width="0"
+        height="0"
+        src="https://www.youtube.com/embed/m-_2MhQpmMk?enablejsapi=1"
+        frameborder="0"
+        allow="autoplay"
+        style="display:none;">
+    </iframe>
+</section><!--VIDEO-YOUTUBE-->
 
-    <section>
-        <h2>Como Te Amar de Mil e Uma Maneiras Diferentes</h2>
-            <video class="momentos" controls width="200" height="360" poster="Imagens/banner.png">
+<section class="galeria">
+    <div class="interface">
+        <h2 class="titulo">
+            Como Te Amar de Mil e Uma Maneiras Diferentes
+        </h2>
+
+        <div class="flex" style="justify-content: center; margin-top: 40px;">
+            <video class="momentos" controls width="240" height="420">
                 <source src="Imagens/Vídeotech.mp4" type="video/mp4">
-            <track kind="subtitles" srclang="pt-br" src="Imagens/Vídeotech.vtt"
-            label="Português">
-                <audio controls>
-                    <source src="Imagens/Vídeotech.mp4" type="audio/mpeg">
-                </audio>
             </video>
-    </section><!--VIDEO-->
+        </div>
+    </div>
+</section><!--VIDEO-->
 
     <section class="formulario" id="contato">
         <div class="interface">
@@ -222,5 +239,34 @@
         </div><!--interface-->
     <p>&copy; 2025 ♥ Feito com amor para Mariana Destro - Todos os direitos reservados.</p>
 </footer><!--Rodape-->
+<script>
+const inicio = document.getElementById("inicio");
+
+let player;
+
+// Carrega API do YouTube
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player("musica");
+}
+
+// Injeta script da API
+const tag = document.createElement("script");
+tag.src = "https://www.youtube.com/iframe_api";
+document.body.appendChild(tag);
+
+// Clique no coração
+inicio.addEventListener("click", () => {
+    inicio.classList.add("sair");
+
+    // Toca a música
+    if (player) {
+        player.playVideo();
+    }
+
+    setTimeout(() => {
+        inicio.style.display = "none";
+    }, 1200);
+});
+</script>
 </body>
 </html>

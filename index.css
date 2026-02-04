@@ -312,7 +312,7 @@ form .btn-limpar input{
     transition: .2s;
 }
 
-/*ESTILO DO RODAPE */
+/* ESTILO DO RODAPE */
 footer{
     padding: 40px 4%;
     box-shadow: 0 0 40px 10px #ffffff42;
@@ -337,4 +337,83 @@ footer .line-footer p i{
 
 footer .line-footer p a{
     color: #000000;
+}
+
+/* TELA INICIAL */
+#inicio {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 248, 240, 0.96);
+    backdrop-filter: blur(4px);
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    transition: opacity 1.2s ease;
+}
+
+/* CONTEÚDO CENTRAL */
+.conteudo-inicio {
+    text-align: center;
+}
+
+/* FRASE */
+.conteudo-inicio p {
+    margin-top: 22px;
+    font-size: 24px;
+    color: #7a2b2b;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+/* CORAÇÃO MINIMALISTA */
+.coracao {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    margin: 0 auto;
+
+    transform: rotate(-45deg);
+    animation: pulse 2.8s ease-in-out infinite;
+}
+
+.coracao::before,
+.coracao::after {
+    content: "";
+    width: 80px;
+    height: 80px;
+    background: #c62828;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.coracao::before {
+    top: -40px;
+    left: 0;
+}
+
+.coracao::after {
+    left: 40px;
+    top: 0;
+}
+
+/* BASE DO CORAÇÃO */
+.coracao {
+    background: #c62828;
+}
+
+/* ANIMAÇÃO SUAVE */
+@keyframes pulse {
+    0%   { transform: rotate(-45deg) scale(1); }
+    50%  { transform: rotate(-45deg) scale(1.06); }
+    100% { transform: rotate(-45deg) scale(1); }
+}
+
+/* FADE AO SUMIR */
+#inicio.sair {
+    opacity: 0;
+    pointer-events: none;
 }
