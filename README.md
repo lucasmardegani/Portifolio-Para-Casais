@@ -1,13 +1,13 @@
-# Plataforma Interativa para Casais
+# Website para Casais
 
-Aplicação web desenvolvida com foco em criar uma experiência personalizada e interativa para casais, permitindo registrar momentos, compartilhar informações e fortalecer a conexão por meio de um ambiente digital simples e intuitivo.
+Website desenvolvido com foco na apresentação de conteúdos voltados a casais, oferecendo uma experiência simples, organizada e visualmente agradável.
 
 ## Funcionalidades
 
-* Interface moderna e responsiva
-* Organização de conteúdos personalizados
-* Experiência interativa entre usuários
-* Estrutura adaptável para diferentes necessidades
+* Exibição de conteúdos informativos
+* Página de contato
+* Layout responsivo
+* Navegação intuitiva
 
 ## Tecnologias
 
@@ -17,4 +17,4 @@ Aplicação web desenvolvida com foco em criar uma experiência personalizada e 
 
 ## Objetivo
 
-Oferecer uma solução leve e acessível para criação de páginas personalizadas voltadas à interação e organização de informações entre casais.
+Proporcionar um ambiente digital leve e acessível para compartilhamento de informações e conteúdos voltados ao público de casais.
